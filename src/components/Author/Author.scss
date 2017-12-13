@@ -1,0 +1,13 @@
+.Author {
+  display: flex;
+  margin: 0;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__name {
+    margin: 0 0 0 5px;
+    font-weight: 700;
+  }
+}

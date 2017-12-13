@@ -1,0 +1,14 @@
+.Profile {
+  padding-bottom: 105px;
+  position: relative; }
+  .Profile__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 98px 81px 104px;
+    background-color: #fff; }
+  .Profile__score {
+    padding-bottom: 7px; }
+  .Profile__activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }

@@ -1,0 +1,56 @@
+.Header {
+  display: flex;
+  align-items: center;
+  width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto; }
+  .Header__logo {
+    margin-right: 50px; }
+  .Header__trade-link {
+    color: #fff;
+    text-decoration: none; }
+    .Header__trade-link_active {
+      color: #61dafb; }
+  .Header__exchange {
+    margin: 0 55px 0 auto; }
+  .Header__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 108px;
+    height: 32px;
+    padding: 0 27px;
+    position: relative;
+    border-radius: 32px;
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none; }
+    .Header__btn_active {
+      background-color: #61dafb; }
+  .Header__btn-text {
+    color: #fff; }
+    .Header__btn-text_small {
+      font-size: 16px; }
+  .Header__btn-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    right: -10px;
+    border-radius: 27px;
+    background-color: #9f3232;
+    color: #fff;
+    font-size: 14px; }
+  .Header__btn-caret {
+    border: 5px solid transparent;
+    border-top: 6px solid #fff;
+    position: relative;
+    top: 3px;
+    margin-left: 5px; }
+  .Header__profile {
+    margin-left: 20px; }
+  .Header__stats {
+    margin-left: 20px; }

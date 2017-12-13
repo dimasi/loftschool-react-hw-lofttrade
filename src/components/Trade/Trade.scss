@@ -1,0 +1,24 @@
+.Trade {
+  display: flex;
+  min-height: calc(100vh - 80px - 100px);
+  padding: 10px 0 47px;
+  background-color: #fff;
+
+  &__left {
+    flex: 0 0 520px;
+    padding: 0 20px 0 79px;
+  }
+
+  &__right {
+    flex: 0 0 760px;
+    padding: 0 27px 0 20px;
+  }
+
+  &__score {
+    padding-bottom: 10px;
+  }
+
+  &__chart {
+    padding-bottom: 10px;
+  }
+}

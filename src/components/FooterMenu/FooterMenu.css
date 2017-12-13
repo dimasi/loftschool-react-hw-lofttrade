@@ -1,0 +1,11 @@
+.FooterMenu {
+  display: flex;
+  align-items: center;
+  list-style: none; }
+  .FooterMenu__item {
+    margin-left: 40px; }
+    .FooterMenu__item:first-child {
+      margin-left: 0; }
+  .FooterMenu__link {
+    color: #fff;
+    text-decoration: none; }

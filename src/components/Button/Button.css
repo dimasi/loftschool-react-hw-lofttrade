@@ -1,0 +1,10 @@
+.Button {
+  height: 51px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 24px; }
+  .Button_block {
+    width: 100%; }
+  .Button_color_primary {
+    border: 1px solid #dfdfdf;
+    background: none #4db6e2; }

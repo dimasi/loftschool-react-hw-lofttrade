@@ -1,0 +1,30 @@
+.HeaderExchange {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    height: 80px;
+    padding: 0 10px;
+    margin: 0 0 0 20px;
+    color: #fff;
+    background-color: rgba(#fff, .1);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__item-title {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  &__item-value {
+    margin: 0;
+  }
+}

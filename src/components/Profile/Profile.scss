@@ -1,0 +1,21 @@
+.Profile {
+  padding-bottom: 105px;
+  position: relative;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 98px 81px 104px;
+    background-color: #fff;
+  }
+
+  &__score {
+    padding-bottom: 7px;
+  }
+
+  &__activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

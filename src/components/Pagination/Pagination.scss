@@ -1,0 +1,40 @@
+.Pagination {
+  display: flex;
+  align-items: center;
+  border: 2px solid #eaebec;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 33px;
+    height: 29px;
+    margin-left: -1px;
+    border: 0 none;
+    border-right: 1px solid #eaebec;
+    border-left: 1px solid #eaebec;
+    background: none #fff;
+  }
+
+  &__btn-prev {
+    border-left: 0 none;
+  }
+
+  &__btn-next {
+    border-right: 0 none;
+  }
+
+  &__btn-icon {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: no-repeat center;
+    background-size: contain;
+  }
+  
+    &__btn-next-icon {
+      transform: rotate(180deg);
+    }
+}

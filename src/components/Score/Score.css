@@ -1,0 +1,29 @@
+.Score__item {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end; }
+
+.Score__item-title {
+  margin-left: 20px; }
+
+.Score__item-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 225px;
+  height: 31px;
+  margin: 0;
+  border-radius: 4px;
+  background-color: #404243;
+  font-size: 16px; }
+
+.Score__item-value-dec {
+  color: #fff;
+  font-weight: 700; }
+
+.Score__item-value-del {
+  color: #fff; }
+
+.Score__item-value-frac {
+  color: #8a8a8a; }

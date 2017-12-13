@@ -1,0 +1,27 @@
+.LoginForm__panel {
+  width: 438px;
+  padding: 22px 22px 33px;
+  margin-bottom: 22px;
+  border: 1px solid #c3c3c3;
+  border-radius: 4px;
+  background-color: #fff; }
+
+.LoginForm__field {
+  margin-bottom: 22px; }
+
+.LoginForm__toggler {
+  width: 438px;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #fff;
+  text-align: center; }
+
+.LoginForm__toggler-link {
+  padding: 0;
+  border: 0 none;
+  background: none transparent;
+  color: #4db6e2;
+  font-size: inherit;
+  font-family: "Roboto", sans-serif;
+  text-decoration: underline;
+  cursor: pointer; }

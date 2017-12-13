@@ -1,0 +1,21 @@
+.HeaderExchange {
+  display: flex;
+  align-items: center; }
+  .HeaderExchange__item {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+    height: 80px;
+    padding: 0 10px;
+    margin: 0 0 0 20px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1); }
+    .HeaderExchange__item:first-child {
+      margin-left: 0; }
+  .HeaderExchange__item-title {
+    margin: 0;
+    font-weight: 700; }
+  .HeaderExchange__item-value {
+    margin: 0; }

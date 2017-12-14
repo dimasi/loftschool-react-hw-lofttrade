@@ -7,7 +7,9 @@
   background-color: #fff; }
 
 .LoginForm__field {
-  margin-bottom: 22px; }
+  margin-top: 22px; }
+  .LoginForm__field:first-child {
+    margin-top: 0; }
 
 .LoginForm__toggler {
   width: 438px;
@@ -25,3 +27,11 @@
   font-family: "Roboto", sans-serif;
   text-decoration: underline;
   cursor: pointer; }
+
+.LoginForm__submit {
+  margin-top: 22px; }
+
+.LoginForm__error-msg {
+  margin: 5px 0;
+  color: rgba(255, 0, 0, 0.8);
+  font-size: 13px; }

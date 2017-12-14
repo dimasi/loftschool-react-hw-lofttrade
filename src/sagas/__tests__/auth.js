@@ -14,7 +14,9 @@ import {
 import {
   loginRequest,
   loginSuccess,
+  loginFailure,
   registrationRequest,
+  registrationFailure,
   logout
 } from './../../actions/auth';
 import {
@@ -23,12 +25,11 @@ import {
   removeTokenFromLocalStorage
 } from './../../localStorage';
 import {getIsAuthorized} from './../../reducers/auth';
-import requestFlow from '../request';
-import {authFlow} from '../auth';
+import {loginFlow, registrationFlow} from '../auth';
 
-describe('Сага authFlow', () => {
+describe('Сага loginFlow', () => {
   describe('Без токена в localStorage', () => {
-    const sagaLogin = authFlow();
+    const sagaLogin = loginFlow();
     const token = 'token';
 
     it('select getIsAuthorized', () => {
@@ -41,10 +42,8 @@ describe('Сага authFlow', () => {
       );
     });
 
-    it('take authLoginRequest и authRegistrationRequest', () => {
-      expect(sagaLogin.next().value).toEqual(
-        take([loginRequest, registrationRequest])
-      );
+    it('take loginRequest', () => {
+      expect(sagaLogin.next().value).toEqual(take(loginRequest));
     });
 
     it('call login', () => {
@@ -56,31 +55,10 @@ describe('Сага authFlow', () => {
         }
       };
       
-      expect(sagaLogin.next(action).value).toEqual(
-        call(requestFlow, login, action.payload)
-      );
+      expect(sagaLogin.next(action).value).toEqual(call(login, action.payload));
     });
 
-    it('call registration', () => {
-      const sagaRegistration = authFlow();
-
-      sagaRegistration.next();
-      sagaRegistration.next();
-      sagaRegistration.next();
-      const action = {
-        type: registrationRequest.toString(),
-        payload: { 
-          email: 'test-email', 
-          password: 'test-pass' 
-        }
-      };
-
-      expect(sagaRegistration.next(action).value).toEqual(
-        call(requestFlow, registration, action.payload)
-      );
-    });
-
-    it('put authLoginSuccess', () => {
+    it('put loginSuccess', () => {
       const action = {
         email: 'test-email', 
         password: 'test-pass',
@@ -89,9 +67,7 @@ describe('Сага authFlow', () => {
         }
       };
 
-      expect(sagaLogin.next(action).value).toEqual(
-        put(loginSuccess())
-      );
+      expect(sagaLogin.next(action).value).toEqual(put(loginSuccess()));
     });
 
     it('call(setTokenApi, token)', () => {
@@ -116,6 +92,115 @@ describe('Сага authFlow', () => {
 
     it('call clearTokenApi', () => {
       expect(sagaLogin.next().value).toEqual(call(clearTokenApi));
+    });
+  });
+
+  describe('С токеном в localStorage', () => {
+    const sagaLogin = loginFlow();
+    const token = 'token';
+
+    it('select getIsAuthorized', () => {
+      expect(sagaLogin.next().value).toEqual(select(getIsAuthorized));
+    });
+
+    it('call getTokenFromLocalStorage', () => {
+      expect(sagaLogin.next().value).toEqual(
+        call(getTokenFromLocalStorage)
+      );
+    });
+
+    it('put loginSuccess', () => {
+      expect(sagaLogin.next(token).value).toEqual(put(loginSuccess()));
+    });
+  });
+});
+
+describe('Сага registrationFlow', () => {
+  describe('Без токена в localStorage', () => {
+    const sagaRegistration = registrationFlow();
+    const token = 'token';
+
+    it('select getIsAuthorized', () => {
+      expect(sagaRegistration.next().value).toEqual(select(getIsAuthorized));
+    });
+
+    it('call getTokenFromLocalStorage', () => {
+      expect(sagaRegistration.next().value).toEqual(
+        call(getTokenFromLocalStorage)
+      );
+    });
+
+    it('take registrationRequest', () => {
+      expect(sagaRegistration.next().value).toEqual(take(registrationRequest));
+    });
+
+    it('call registration', () => {
+      const action = {
+        type: registrationRequest.toString(),
+        payload: { 
+          email: 'test-email', 
+          password: 'test-pass'
+        }
+      };
+      
+      expect(sagaRegistration.next(action).value).toEqual(
+        call(registration, action.payload)
+      );
+    });
+
+    it('put loginSuccess', () => {
+      const action = {
+        email: 'test-email', 
+        password: 'test-pass',
+        data: {
+          jwt: token
+        }
+      };
+
+      expect(sagaRegistration.next(action).value).toEqual(put(loginSuccess()));
+    });
+
+    it('call(setTokenApi, token)', () => {
+      expect(sagaRegistration.next().value).toEqual(call(setTokenApi, token));
+    });
+
+    it('call setTokenToLocalStorage', () => {
+      expect(sagaRegistration.next().value).toEqual(
+        call(setTokenToLocalStorage, token)
+      );
+    });
+
+    it('take logout', () => {
+      expect(sagaRegistration.next().value).toEqual(take(logout));
+    });
+
+    it('call removeTokenFromLocalStorage', () => {
+      expect(sagaRegistration.next().value).toEqual(
+        call(removeTokenFromLocalStorage)
+      );
+    });
+
+    it('call clearTokenApi', () => {
+      expect(sagaRegistration.next().value).toEqual(call(clearTokenApi));
+    });
+  });
+
+  describe('С токеном в localStorage', () => {
+    const sagaRegistration = registrationFlow();
+    const token = 'token';
+
+    it('select getIsAuthorized', () => {
+      expect(sagaRegistration.next().value).toEqual(select(getIsAuthorized));
+    });
+
+    it('call getTokenFromLocalStorage', () => {
+      expect(sagaRegistration.next().value).toEqual(
+        call(getTokenFromLocalStorage)
+      );
+    });
+
+    it('put loginSuccess', () => {
+      expect(sagaRegistration.next(token).value).toEqual(put(loginSuccess()));
     });
   });
 });

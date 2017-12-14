@@ -59,18 +59,42 @@ class LoginForm extends PureComponent {
     })
   }
 
-  renderErrorMsg = () => {
-    const {loginError, registationError} = this.props;
-    const {isLogin} = this.state;
+  capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
 
-    if (loginError && isLogin) {
+  renderErrorMsg = () => {
+    const {loginError} = this.props;
+
+    if (loginError) {
       return (
-        <p className="LoginForm__error-msg">{loginError}</p>
+        <p className="LoginForm__error-msg">
+          {this.capitalizeFirstLetter(loginError)}
+        </p>
       );
     }
-    else if (registationError && !isLogin) {
+  }
+
+  renderLoginErrorMsg = () => {
+    const {registrationError} = this.props;
+
+    if (registrationError && registrationError.email) {
       return (
-        <p className="LoginForm__error-msg">{registationError}</p>
+        <p className="LoginForm__error-msg">
+          {this.capitalizeFirstLetter(registrationError.email[0])}
+        </p>
+      );
+    }
+  }
+
+  renderPasswordErrorMsg = () => {
+    const {registrationError} = this.props;
+
+    if (registrationError && registrationError.password) {
+      return (
+        <p className="LoginForm__error-msg">
+          {this.capitalizeFirstLetter(registrationError.password[0])}
+        </p>
       );
     }
   }
@@ -142,6 +166,7 @@ class LoginForm extends PureComponent {
               value={email}
               onChange={this.handleChange}
             />
+            {this.renderLoginErrorMsg()}
           </div>
           <div className="LoginForm__field">
             <Textfield 
@@ -152,6 +177,7 @@ class LoginForm extends PureComponent {
               value={password}
               onChange={this.handleChange}
             />
+            {this.renderPasswordErrorMsg()}
           </div>
           {this.renderErrorMsg()}
           <div className="LoginForm__submit">
@@ -167,7 +193,7 @@ class LoginForm extends PureComponent {
 const mapStateToProps = state => ({
   isAuthorized: getIsAuthorized(state),
   loginError: getLoginError(state),
-  registationError: getRegistrationError(state)
+  registrationError: getRegistrationError(state)
 });
 
 const mapDispatchToProps = {

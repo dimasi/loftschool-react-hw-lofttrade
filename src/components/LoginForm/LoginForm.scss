@@ -9,7 +9,11 @@
   }
 
   &__field {
-    margin-bottom: 22px;
+    margin-top: 22px;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   &__toggler {
@@ -29,5 +33,15 @@
     font-family: "Roboto", sans-serif;
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  &__submit {
+    margin-top: 22px;
+  }
+
+  &__error-msg {
+    margin: 5px 0;
+    color: rgba(#ff0000, .8);
+    font-size: 13px;
   }
 }

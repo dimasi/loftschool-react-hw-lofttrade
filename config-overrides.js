@@ -1,4 +1,4 @@
-const rewireStyledComponents = require('react-app-rewire-styled-components');
+const rewireLodash = require('react-app-rewire-lodash');
 const path = require(`path`);
 const fs = require('fs');
 
@@ -28,6 +28,8 @@ module.exports = function override(config, env) {
     __dirname, 
     'src/sagas'
   );
+
+  config = rewireLodash(config, env);
 
   fs.writeFileSync(
     './webpack.config.js', 

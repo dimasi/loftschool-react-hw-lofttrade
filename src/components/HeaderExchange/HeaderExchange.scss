@@ -12,10 +12,23 @@
     padding: 0 10px;
     margin: 0 0 0 20px;
     color: #fff;
-    background-color: rgba(#fff, .1);
+    cursor: pointer;
 
     &:first-child {
       margin-left: 0;
+    }
+    
+    &:hover {
+      background-color: rgba(#fff, .05);
+    }
+
+    &_active {
+      background-color: rgba(#fff, .1);
+      cursor: default;
+
+      &:hover {
+        background-color: rgba(#fff, .1);
+      }
     }
   }
 

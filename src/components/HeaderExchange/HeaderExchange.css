@@ -11,9 +11,16 @@
     padding: 0 10px;
     margin: 0 0 0 20px;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.1); }
+    cursor: pointer; }
     .HeaderExchange__item:first-child {
       margin-left: 0; }
+    .HeaderExchange__item:hover {
+      background-color: rgba(255, 255, 255, 0.05); }
+    .HeaderExchange__item_active {
+      background-color: rgba(255, 255, 255, 0.1);
+      cursor: default; }
+      .HeaderExchange__item_active:hover {
+        background-color: rgba(255, 255, 255, 0.1); }
   .HeaderExchange__item-title {
     margin: 0;
     font-weight: 700; }

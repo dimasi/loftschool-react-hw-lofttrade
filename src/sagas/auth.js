@@ -35,6 +35,7 @@ export function* loginFlow() {
   if (!isAuthorized) {
     if (localStorageToken) {
       token = localStorageToken;
+      yield call(setTokenApi, token);
       yield put(loginSuccess());
     } else {
       while (true) {
@@ -67,6 +68,7 @@ export function* registrationFlow() {
   if (!isAuthorized) {
     if (localStorageToken) {
       token = localStorageToken;
+      yield call(setTokenApi, token);
       yield put(loginSuccess());
     } else {
       while (true) {

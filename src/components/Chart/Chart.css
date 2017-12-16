@@ -1,34 +1,4 @@
 .Chart__container {
+  height: 327px;
+  position: relative;
   border: 1px solid #f2f2f2; }
-
-.Chart__controls {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 41px;
-  padding: 0 10px;
-  background-color: #edf0f1; }
-
-.Chart__controls-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 12px;
-  min-width: 59px;
-  height: 27px;
-  margin-left: 4px;
-  background: none transparent;
-  border: 0 none;
-  border-radius: 3px;
-  color: #999;
-  font-weight: 700; }
-  .Chart__controls-btn:first-child {
-    margin-left: 0; }
-  .Chart__controls-btn:hover {
-    background-color: rgba(0, 0, 0, 0.075); }
-  .Chart__controls-btn_active {
-    background-color: #4db6e2;
-    color: #fff;
-    cursor: default; }
-    .Chart__controls-btn_active:hover {
-      background-color: #4db6e2; }

@@ -10,7 +10,7 @@ import {
   clearTokenApi, 
   login, 
   registration
-} from './../../api';
+} from 'api';
 import {
   loginRequest,
   loginSuccess,
@@ -18,14 +18,14 @@ import {
   registrationRequest,
   registrationFailure,
   logout
-} from './../../actions/auth';
+} from 'actions/auth';
 import {
   getTokenFromLocalStorage,
   setTokenToLocalStorage,
   removeTokenFromLocalStorage
-} from './../../localStorage';
-import {getIsAuthorized} from './../../reducers/auth';
-import {loginFlow, registrationFlow} from '../auth';
+} from 'localStorage';
+import {getIsAuthorized} from 'reducers/auth';
+import {loginFlow, registrationFlow} from './../auth';
 
 describe('Сага loginFlow', () => {
   describe('Без токена в localStorage', () => {
@@ -106,6 +106,12 @@ describe('Сага loginFlow', () => {
     it('call getTokenFromLocalStorage', () => {
       expect(sagaLogin.next().value).toEqual(
         call(getTokenFromLocalStorage)
+      );
+    });
+
+    it('call setTokenApi с передачей токена', () => {
+      expect(sagaLogin.next(token).value).toEqual(
+        call(setTokenApi, token)
       );
     });
 
@@ -196,6 +202,12 @@ describe('Сага registrationFlow', () => {
     it('call getTokenFromLocalStorage', () => {
       expect(sagaRegistration.next().value).toEqual(
         call(getTokenFromLocalStorage)
+      );
+    });
+    
+    it('call setTokenApi с передачей токена', () => {
+      expect(sagaRegistration.next(token).value).toEqual(
+        call(setTokenApi, token)
       );
     });
 

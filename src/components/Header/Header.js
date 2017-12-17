@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import Logo from 'Components/Logo';
-import HeaderExchange from 'Components/HeaderExchange';
+import React, {Component} from 'react';
+import {NavLink} from 'react-router-dom';
+import Logo from 'components/Logo';
+import HeaderExchange from 'components/HeaderExchange';
 import './Header.css';
 
-export default class Header extends Component {
+export class Header extends Component {
   render() {
     return (
       <div className="Header">
@@ -55,3 +55,5 @@ export default class Header extends Component {
     );
   }
 }
+
+export default Header;

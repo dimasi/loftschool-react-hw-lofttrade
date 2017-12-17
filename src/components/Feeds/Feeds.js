@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
-import FeedList from 'Components/FeedList';
+import React, {PureComponent} from 'react';
+import FeedList from 'components/FeedList';
 import './Feeds.css';
-import avatarSmall1 from 'Images/avatar-small-1.jpg';
-import avatarSmall2 from 'Images/avatar-small-2.jpg';
-import avatarSmall3 from 'Images/avatar-small-3.jpg';
-import avatarSmall4 from 'Images/avatar-small-4.jpg';
-import feedImg1 from 'Images/feed-img-1.jpg';
-import feedImg2 from 'Images/feed-img-2.jpg';
+import avatarSmall1 from 'images/avatar-small-1.jpg';
+import avatarSmall2 from 'images/avatar-small-2.jpg';
+import avatarSmall3 from 'images/avatar-small-3.jpg';
+import avatarSmall4 from 'images/avatar-small-4.jpg';
+import feedImg1 from 'images/feed-img-1.jpg';
+import feedImg2 from 'images/feed-img-2.jpg';
 
 const _feeds = [
   {
@@ -114,7 +114,7 @@ const _feeds = [
   }
 ];
 
-export default class Feeds extends PureComponent {
+export class Feeds extends PureComponent {
   render() {
     return (
       <div className="Feeds">
@@ -127,3 +127,5 @@ export default class Feeds extends PureComponent {
     );
   }
 }
+
+export default Feeds;

@@ -1,1 +1,1 @@
-export { default } from './MoreToggler';
+export {default} from './MoreToggler';

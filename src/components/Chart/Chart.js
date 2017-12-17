@@ -80,7 +80,7 @@ export class Chart extends PureComponent {
               width: "100%",
               height: "100%"
             },
-            colors: ['#366cd9', '#d9364d'],
+            colors: ['#4db6e2', '#db5753'],
             legend: { position: 'top' }
           }}
           graph_id="ScatterChart"

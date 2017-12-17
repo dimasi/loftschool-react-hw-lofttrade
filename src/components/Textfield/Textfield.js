@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import './Textfield.css';
 
-class Textfield extends PureComponent {
+export class Textfield extends PureComponent {
   render() {
     const {
       type, 

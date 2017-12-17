@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
 import './Profile.css';
-import Score from 'Components/Score';
-import SavingsAmount from 'Components/SavingsAmount';
-import SectionHeading from 'Components/SectionHeading';
-import FeedList from 'Components/FeedList';
-import UserCard from 'Components/UserCard';
-import avatarSmall5 from 'Images/avatar-small-5.jpg';
-import feedImg3 from 'Images/feed-img-3.jpg';
+import Wallet from 'components/Wallet';
+import SavingsAmount from 'components/SavingsAmount';
+import SectionHeading from 'components/SectionHeading';
+import FeedList from 'components/FeedList';
+import UserCard from 'components/UserCard';
+import avatarSmall5 from 'images/avatar-small-5.jpg';
+import feedImg3 from 'images/feed-img-3.jpg';
 
 const _feeds = [
   {
@@ -64,7 +64,7 @@ const _feeds = [
   }
 ];
 
-export default class Profile extends PureComponent {
+export class Profile extends PureComponent {
   render() {
     return (
       <div className="Profile">
@@ -77,7 +77,7 @@ export default class Profile extends PureComponent {
           </div>
           <div className="Profile__body-right">
             <div className="Profile__score">
-              <Score />
+              <Wallet />
             </div>
             <div className="Profile__savings-amount">
               <SavingsAmount savings={'1 123'} />
@@ -94,3 +94,5 @@ export default class Profile extends PureComponent {
     );
   }
 }
+
+export default Profile;

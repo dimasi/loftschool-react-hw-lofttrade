@@ -6,7 +6,7 @@ import {
   loginFailure,
   registrationRequest,
   registrationFailure
-} from "./../actions/auth";
+} from "actions/auth";
 
 export const isAuthorized = handleActions(
   {

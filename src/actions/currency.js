@@ -19,6 +19,20 @@ const actionCreators = createActions({
         FAILURE: undefined
       }
     }
+  },
+  BUY: {
+    CURRENCY: {
+      REQUEST: undefined,
+      SUCCESS: undefined,
+      FAILURE: undefined
+    }
+  },
+  SELL: {
+    CURRENCY: {
+      REQUEST: undefined,
+      SUCCESS: undefined,
+      FAILURE: undefined
+    }
   }
 });
 
@@ -33,3 +47,11 @@ export const fetchBtcFailure = actionCreators.currency.fetch.btc.failure;
 export const fetchEthRequest = actionCreators.currency.fetch.eth.request;
 export const fetchEthSuccess = actionCreators.currency.fetch.eth.success;
 export const fetchEthFailure = actionCreators.currency.fetch.eth.failure;
+
+export const buyCurrencyRequest = actionCreators.buy.currency.request;
+export const buyCurrencySuccess = actionCreators.buy.currency.success;
+export const buyCurrencyFailure = actionCreators.buy.currency.failure;
+
+export const sellCurrencyRequest = actionCreators.sell.currency.request;
+export const sellCurrencySuccess = actionCreators.sell.currency.success;
+export const sellCurrencyFailure = actionCreators.sell.currency.failure;

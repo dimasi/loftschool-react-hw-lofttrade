@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
-import Feed from 'Components/Feed';
+import React, {PureComponent} from 'react';
+import Feed from 'components/Feed';
 import './FeedList.css';
 
-class FeedList extends PureComponent {
+export class FeedList extends PureComponent {
   render() {
     const {feeds} = this.props;
 

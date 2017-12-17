@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
-import UserLabel from 'Components/UserLabel';
+import React, {PureComponent} from 'react';
+import UserLabel from 'components/UserLabel';
 import cx from 'classnames';
-import Comments from 'Components/Comments';
-import CommentsBtn from 'Components/CommentsBtn';
-import MoreToggler from 'Components/MoreToggler';
+import Comments from 'components/Comments';
+import CommentsBtn from 'components/CommentsBtn';
+import MoreToggler from 'components/MoreToggler';
 import './Feed.css';
 
-class Feed extends PureComponent {
+export class Feed extends PureComponent {
   renderTopImg = () => {
     const { topImg } = this.props;
 

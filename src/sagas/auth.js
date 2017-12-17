@@ -10,12 +10,12 @@ import {
   clearTokenApi, 
   login, 
   registration 
-} from "./../api";
+} from "api";
 import {
   getTokenFromLocalStorage,
   setTokenToLocalStorage,
   removeTokenFromLocalStorage
-} from "./../localStorage";
+} from "localStorage";
 import {
   registrationRequest,
   registrationFailure,
@@ -23,8 +23,8 @@ import {
   loginSuccess,
   loginFailure,
   logout
-} from "./../actions/auth";
-import {getIsAuthorized} from "./../reducers/auth";
+} from "actions/auth";
+import {getIsAuthorized} from "reducers/auth";
 
 
 export function* loginFlow() {

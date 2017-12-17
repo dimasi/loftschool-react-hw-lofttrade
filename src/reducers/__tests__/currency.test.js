@@ -65,7 +65,13 @@ describe('Редьюсер currency', () => {
   () => {
     const next = currency(
       {isBtcLoading: true},
-      {type: fetchBtcSuccess}
+      {
+        type: fetchBtcSuccess,
+        payload: [{
+          purchase: 1, 
+          sell: 1
+        }]
+      }
     );
     
     expect(next.isBtcLoading).toBeFalsy();
@@ -76,11 +82,17 @@ describe('Редьюсер currency', () => {
       {btc: []},
       {
         type: fetchBtcSuccess,
-        payload: [{test: 'test'}]
+        payload: [{
+          purchase: 1, 
+          sell: 1
+        }]
       }
     );
     
-    expect(next.btc).toEqual([{test: 'test'}]);
+    expect(next.btc).toEqual([{
+      purchase: 1, 
+      sell: 1
+    }]);
   });
   
   it('Экшен с типом fetchBtcFailure изменяет значение isBtcLoading на false', 
@@ -134,7 +146,13 @@ describe('Редьюсер currency', () => {
   () => {
     const next = currency(
       {isEthLoading: true},
-      {type: fetchEthSuccess}
+      {
+        type: fetchEthSuccess,
+        payload: [{
+          purchase: 1, 
+          sell: 1
+        }]
+      }
     );
     
     expect(next.isEthLoading).toBeFalsy();
@@ -145,11 +163,17 @@ describe('Редьюсер currency', () => {
       {eth: []},
       {
         type: fetchEthSuccess,
-        payload: [{test: 'test'}]
+        payload: [{
+          purchase: 1, 
+          sell: 1
+        }]
       }
     );
     
-    expect(next.eth).toEqual([{test: 'test'}]);
+    expect(next.eth).toEqual([{
+      purchase: 1, 
+      sell: 1
+    }]);
   });
   
   it('Экшен с типом fetchEthFailure изменяет значение isEthLoading на false', 
@@ -178,5 +202,64 @@ describe('Редьюсер currency', () => {
     );
     
     expect(next.eth).toEqual(error);
+  });
+  
+  describe('Цена покупки и продажи валюты', () => {
+    const payload = [{
+      purchase: 2,
+      sell: 1
+    }];
+
+    it('Экшен с типом fetchBtcSuccess изменяет значение btcPurchase', 
+    () => {
+      const next = currency(
+        {btcPurchase: 0},
+        {
+          type: fetchBtcSuccess, 
+          payload: payload
+        }
+      );
+      
+      expect(next.btcPurchase).toEqual(2);
+    });
+
+    it('Экшен с типом fetchBtcSuccess изменяет значение btcSell', 
+    () => {
+      const next = currency(
+        {btcSell: 0},
+        {
+          type: fetchBtcSuccess, 
+          payload: payload
+        }
+      );
+      
+      expect(next.btcSell).toEqual(1);
+    });
+
+    it('Экшен с типом fetchEthSuccess изменяет значение ethPurchase', 
+    () => {
+      const next = currency(
+        {ethPurchase: 0},
+        {
+          type: fetchEthSuccess, 
+          payload: payload
+        }
+      );
+      
+      expect(next.ethPurchase).toEqual(2);
+    });
+
+    it('Экшен с типом fetchEthSuccess изменяет значение ethSell', 
+    () => {
+      const next = currency(
+        {ethSell: 0},
+        {
+          type: fetchEthSuccess, 
+          payload: payload
+        }
+      );
+      
+      expect(next.ethSell).toEqual(1);
+    });
   });
 });

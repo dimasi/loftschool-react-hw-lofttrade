@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
+import React, {PureComponent} from 'react';
+import {Link} from 'react-router-dom';
 import './FooterMenu.css';
 
-export default class FooterMenu extends PureComponent {
+export class FooterMenu extends PureComponent {
   render() {
     return (
       <ul className="FooterMenu">
@@ -34,3 +34,5 @@ export default class FooterMenu extends PureComponent {
     );
   }
 }
+
+export default FooterMenu;

@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
-import SectionHeading from 'Components/SectionHeading';
-import Pagination from 'Components/Pagination';
+import React, {PureComponent} from 'react';
+import SectionHeading from 'components/SectionHeading';
+import Pagination from 'components/Pagination';
 import './History.css';
 
-class History extends PureComponent {
+export class History extends PureComponent {
   render() {
     return (
       <section className="History">

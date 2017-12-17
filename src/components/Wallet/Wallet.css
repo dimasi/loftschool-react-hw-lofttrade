@@ -1,13 +1,13 @@
-.Score__item {
+.Wallet__item {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: flex-end; }
 
-.Score__item-title {
+.Wallet__item-title {
   margin-left: 20px; }
 
-.Score__item-value {
+.Wallet__item-value {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,12 +18,12 @@
   background-color: #404243;
   font-size: 16px; }
 
-.Score__item-value-dec {
+.Wallet__item-value-dec {
   color: #fff;
   font-weight: 700; }
 
-.Score__item-value-del {
+.Wallet__item-value-del {
   color: #fff; }
 
-.Score__item-value-frac {
+.Wallet__item-value-frac {
   color: #8a8a8a; }

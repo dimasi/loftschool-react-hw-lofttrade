@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
-import imgAngleArrow from 'Images/angle-arrow.svg';
+import React, {PureComponent} from 'react';
+import imgAngleArrow from 'images/angle-arrow.svg';
 import './Pagination.css';
 
-class History extends PureComponent {
+export class Pagination extends PureComponent {
   render() {
     return (
       <div className="Pagination">
@@ -29,4 +29,4 @@ class History extends PureComponent {
   }
 };
 
-export default History;
+export default Pagination;

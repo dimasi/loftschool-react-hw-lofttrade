@@ -1,10 +1,10 @@
-import React, { PureComponent } from 'react';
-import Logo from 'Components/Logo';
-import Author from 'Components/Author';
-import FooterMenu from 'Components/FooterMenu';
+import React, {PureComponent} from 'react';
+import Logo from 'components/Logo';
+import Author from 'components/Author';
+import FooterMenu from 'components/FooterMenu';
 import './Footer.css';
 
-export default class Footer extends PureComponent {
+export class Footer extends PureComponent {
   render() {
     return (
       <div className="Footer">
@@ -25,3 +25,5 @@ export default class Footer extends PureComponent {
     );
   }
 }
+
+export default Footer;

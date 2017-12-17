@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react';
-import UserLabel from 'Components/UserLabel';
-import SavingsAmount from 'Components/SavingsAmount';
-import prize1 from 'Images/prize-1.svg';
-import prize2 from 'Images/prize-2.svg';
-import prize3 from 'Images/prize-3.svg';
+import UserLabel from 'components/UserLabel';
+import SavingsAmount from 'components/SavingsAmount';
+import prize1 from 'images/prize-1.svg';
+import prize2 from 'images/prize-2.svg';
+import prize3 from 'images/prize-3.svg';
 import './Stat.css';
 
-class Stat extends PureComponent {
+export class Stat extends PureComponent {
   renderPositionImage = () => {
     const {user: {position}} = this.props;
 

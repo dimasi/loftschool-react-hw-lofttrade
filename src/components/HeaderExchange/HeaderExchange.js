@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import cx from 'classnames';
+import {withRouter, NavLink} from 'react-router-dom';
 import {
   getSelected,
   getBtc,
@@ -12,64 +12,43 @@ import {
 } from 'actions/currency';
 import './HeaderExchange.css';
 
-class HeaderExchange extends Component {
+export class HeaderExchange extends Component {
   shouldComponentUpdate(nextProps, nextState) {
     const {btc, eth} = nextProps;
-
     return btc.length && eth.length;
   }
 
-  handleBtcClick = () => {
-    const {
-      selected,
-      selectBtc
-    } = this.props;
-
-    if (selected !== 'btc') {
-      selectBtc();
-    }
-  }
-
-  handleEthClick = () => {
-    const {
-      selected,
-      selectEth
-    } = this.props;
-
-    if (selected !== 'eth') {
-      selectEth();
-    }
-  }
-
   renderBtc = () => {
-    const {selected, btc} = this.props;
+    const {btc} = this.props;
     const sell = btc.length ? btc[0].sell.toFixed(2) : '';
-    const itemClasses = cx(
-      'HeaderExchange__item',
-      {'HeaderExchange__item_active': selected === 'btc'}
-    )
 
     return (
-      <dl className={itemClasses} onClick={this.handleBtcClick}>
-        <dt className="HeaderExchange__item-title">1 BTC</dt>
-        <dd className="HeaderExchange__item-value">{sell}</dd>
-      </dl>
+      <NavLink 
+        className="HeaderExchange__item"
+        activeClassName="HeaderExchange__item_active"
+        to="/trade/btc"
+        exact
+      >
+        <span className="HeaderExchange__item-title">1 BTC</span>
+        <span className="HeaderExchange__item-value">{sell}</span>
+      </NavLink>
     );
   }
 
   renderEth = () => {
-    const {selected, eth} = this.props;
+    const {eth} = this.props;
     const sell = eth.length ? eth[0].sell.toFixed(2) : '';
-    const itemClasses = cx(
-      'HeaderExchange__item',
-      {'HeaderExchange__item_active': selected === 'eth'}
-    )
 
     return (
-      <dl className={itemClasses} onClick={this.handleEthClick}>
-        <dt className="HeaderExchange__item-title">1 ETH</dt>
-        <dd className="HeaderExchange__item-value">{sell}</dd>
-      </dl>
+      <NavLink 
+        className="HeaderExchange__item"
+        activeClassName="HeaderExchange__item_active"
+        to="/trade/eth"
+        exact
+      >
+        <span className="HeaderExchange__item-title">1 ETH</span>
+        <span className="HeaderExchange__item-value">{sell}</span>
+      </NavLink>
     );
   }
 
@@ -94,4 +73,6 @@ const mapDispatchToProps = {
   selectEth
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HeaderExchange);
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(HeaderExchange)
+);

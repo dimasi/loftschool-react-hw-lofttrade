@@ -3,19 +3,19 @@ import {connect} from 'react-redux';
 import {
   loginRequest, 
   registrationRequest
-} from 'Actions/auth';
+} from 'actions/auth';
 import {
   getIsAuthorized,
   getLoginError,
   getRegistrationError
-} from "Reducers/auth";
-import Textfield from 'Components/Textfield';
-import Button from 'Components/Button';
-import imgUserShape from 'Images/user-shape.svg'
-import imgPadlockUnlock from 'Images/padlock-unlock.svg'
+} from "reducers/auth";
+import Textfield from 'components/Textfield';
+import Button from 'components/Button';
+import imgUserShape from 'images/user-shape.svg'
+import imgPadlockUnlock from 'images/padlock-unlock.svg'
 import './LoginForm.css';
 
-class LoginForm extends PureComponent {
+export class LoginForm extends PureComponent {
   state = {
     error: null,
     isLogin: true,

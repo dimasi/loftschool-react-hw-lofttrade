@@ -1,11 +1,11 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
+import Stat from 'components/Stat';
+import avatarSmall1 from 'images/avatar-small-1.jpg';
+import avatarSmall2 from 'images/avatar-small-2.jpg';
+import avatarSmall3 from 'images/avatar-small-3.jpg';
+import avatarSmall4 from 'images/avatar-small-4.jpg';
+import avatarSmall5 from 'images/avatar-small-5.jpg';
 import './Stats.css';
-import Stat from 'Components/Stat';
-import avatarSmall1 from 'Images/avatar-small-1.jpg';
-import avatarSmall2 from 'Images/avatar-small-2.jpg';
-import avatarSmall3 from 'Images/avatar-small-3.jpg';
-import avatarSmall4 from 'Images/avatar-small-4.jpg';
-import avatarSmall5 from 'Images/avatar-small-5.jpg';
 
 const _props = [
   {
@@ -55,7 +55,7 @@ const _props = [
   }
 ];
 
-export default class Stats extends PureComponent {
+export class Stats extends PureComponent {
   render() {
     return (
       <div className="Stats">
@@ -69,10 +69,9 @@ export default class Stats extends PureComponent {
             />
           );
         })}
-
-        
-
       </div>
     );
   }
 }
+
+export default Stats;

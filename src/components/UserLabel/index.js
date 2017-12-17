@@ -1,1 +1,1 @@
-export { default } from './UserLabel';
+export {default} from './UserLabel';

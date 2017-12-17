@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
-import Header from 'Components/Header';
-import Footer from 'Components/Footer';
-import Trade from 'Components/Trade';
-import Feeds from 'Components/Feeds';
-import Stats from 'Components/Stats';
-import Profile from 'Components/Profile';
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+import Trade from 'components/Trade';
+import Feeds from 'components/Feeds';
+import Stats from 'components/Stats';
+import Profile from 'components/Profile';
 import './LoftTrade.css';
 
-export default class App extends Component {
+export class App extends Component {
   render() {
     return (
       <div className="LoftTrade">
@@ -17,11 +17,11 @@ export default class App extends Component {
         </header>
         <main className="LoftTrade__mainbody">
           <Switch>
-            <Route path="/trade" component={Trade} />
+            <Route path="/trade/:cur" component={Trade} />
             <Route path="/feeds" component={Feeds} />
             <Route path="/stats" component={Stats} />
             <Route path="/profile" component={Profile} />
-            <Redirect from="*" to="/trade" />
+            <Redirect from="*" to="/trade/btc" />
           </Switch>
         </main>
         <footer className="LoftTrade__footer">
@@ -31,3 +31,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App;

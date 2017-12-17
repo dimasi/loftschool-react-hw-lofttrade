@@ -6,15 +6,15 @@ import {
   Redirect, 
   withRouter
 } from 'react-router-dom';
-import {getIsAuthorized} from "Reducers/auth";
+import {getIsAuthorized} from "reducers/auth";
 import Particles from 'react-particles-js';
-import particlesParams from 'Src/particles-params';
-import PrivateRoute from 'Components/PrivateRoute';
-import Login from 'Components/Login';
-import LoftTrade from 'Components/LoftTrade';
+import particlesParams from 'particles-params';
+import PrivateRoute from 'components/PrivateRoute';
+import Login from 'components/Login';
+import LoftTrade from 'components/LoftTrade';
 import './App.css';
 
-class App extends Component {
+export class App extends Component {
   render() {
     const {isAuthorized} = this.props;
 
@@ -25,11 +25,11 @@ class App extends Component {
           canvasClassName="App__background"
         />
         <Switch>
-          <PrivateRoute path="/trade" component={LoftTrade} />
+          <PrivateRoute path="/trade/:cur" component={LoftTrade} />
           <PrivateRoute path="/feeds" component={LoftTrade} />
           <PrivateRoute path="/stats" component={LoftTrade} />
           <PrivateRoute path="/profile" component={LoftTrade} />
-          {isAuthorized && <Redirect to="/trade" />}
+          {isAuthorized && <Redirect to="/trade/btc" />}
           <Route path="*" exact component={Login} />
         </Switch>
       </div>

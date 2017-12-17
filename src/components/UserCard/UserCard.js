@@ -1,8 +1,8 @@
-import React, { PureComponent } from 'react';
-import avatar from 'Images/avatar.jpg';
+import React, {PureComponent} from 'react';
+import avatar from 'images/avatar.jpg';
 import './UserCard.css';
 
-class UserCard extends PureComponent {
+export class UserCard extends PureComponent {
   render() {
     return (
       <div className="UserCard">

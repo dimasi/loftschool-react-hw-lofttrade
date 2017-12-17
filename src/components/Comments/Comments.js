@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
-import UserLabel from 'Components/UserLabel';
-import Comment from 'Components/Comment';
+import React, {PureComponent} from 'react';
+import UserLabel from 'components/UserLabel';
+import Comment from 'components/Comment';
 import './Comments.css';
 
-class Comments extends PureComponent {
+export class Comments extends PureComponent {
   render() {
     const {
       comments,

@@ -1,8 +1,8 @@
 import React from 'react';
 import './CommentsBtn.css';
-import imgMessageBubble from 'Images/message-bubble.svg';
+import imgMessageBubble from 'images/message-bubble.svg';
 
-const CommentsBtn = (props) => {
+export const CommentsBtn = (props) => {
   const {commentsAmount} = props;
 
   return (

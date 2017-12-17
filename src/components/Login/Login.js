@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
-import LoginForm from 'Components/LoginForm';
+import LoginForm from 'components/LoginForm';
 import imgLogo from './images/Logo.svg';
 import './Login.css';
 
-export default class Login extends PureComponent {
+export class Login extends PureComponent {
   render() {
     return (
       <div className="Login">
@@ -17,3 +17,5 @@ export default class Login extends PureComponent {
     );
   }
 }
+
+export default Login;

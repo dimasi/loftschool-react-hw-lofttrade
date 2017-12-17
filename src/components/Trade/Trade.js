@@ -1,32 +1,76 @@
-import React, { PureComponent } from 'react';
-import Score from 'Components/Score';
-import Chart from 'Components/Chart';
-import History from 'Components/History';
+import React, {PureComponent} from 'react';
+import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
+import {
+  getSelected
+} from 'reducers/currency';
+import {
+  selectBtc, 
+  selectEth
+} from 'actions/currency';
+import Wallet from 'components/Wallet';
+import Chart from 'components/Chart';
+import History from 'components/History';
+import TradeOperations from 'components/TradeOperations';
 import './Trade.css';
 
-export default class Trade extends PureComponent {
+export class Trade extends PureComponent {
+  componentDidMount() {
+    this.selectCurrency();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    this.selectCurrency();
+  }
+
+  selectCurrency = () => {
+    const {
+      selectBtc,
+      selectEth
+    } = this.props;
+    
+    if (this.props.match.params.cur === "eth") {
+      selectEth();
+    } else {
+      selectBtc();
+    }
+  }
+
   render() {
     return (
       <div className="Trade">
         <div className="Trade__left">
           <div className="Trade__score">
-            <Score />
+            <Wallet />
           </div>
           <div className="Trade__exchange">
-            <section className="exchange">
-              <h4 className="section-heading">Покупка/продажа</h4>
-            </section>
+            <div className="exchange">
+              <TradeOperations />
+            </div>
           </div>
         </div>
         <div className="Trade__right">
           <div className="Trade__chart">
             <Chart />
           </div>
-          <section className="Trade__history">
+          <div className="Trade__history">
             <History />
-          </section>
+          </div>
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = state => ({
+  selected: getSelected(state)
+});
+
+const mapDispatchToProps = {
+  selectBtc,
+  selectEth
+};
+
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(Trade)
+);

@@ -1,17 +1,17 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import './UserLabel.css';
 
-class UserLabel extends PureComponent {
+export class UserLabel extends PureComponent {
   renderBadge = () => {
-    const { badgeText } = this.props;
+    const {badgeText} = this.props;
 
     if (badgeText) {
-      return <span className="UserLabel__position">{ badgeText }</span>;
+      return <span className="UserLabel__position">{badgeText}</span>;
     }
   }
 
   render() {
-    const { avatar, text } = this.props;
+    const {avatar, text} = this.props;
 
     return (
       <div className="UserLabel">
@@ -20,7 +20,7 @@ class UserLabel extends PureComponent {
           style={{backgroundImage: `url(${avatar})`}}
         >
         </span>
-        <span className="UserLabel__name">{ text }</span>
+        <span className="UserLabel__name">{text}</span>
         {this.renderBadge()}
       </div>
     );

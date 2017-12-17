@@ -1,7 +1,7 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import './SavingsAmount.css';
 
-class SavingsAmount extends PureComponent {
+export class SavingsAmount extends PureComponent {
   render() {
     const {savings} = this.props;
 

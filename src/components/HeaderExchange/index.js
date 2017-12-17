@@ -1,1 +1,1 @@
-export { default } from './HeaderExchange';
+export {default} from './HeaderExchange';

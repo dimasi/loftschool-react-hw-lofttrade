@@ -1,1 +1,1 @@
-export { default } from './CommentsBtn';
+export {default} from './CommentsBtn';

@@ -1,0 +1,10 @@
+.SavingsAmount {
+  margin: 0; }
+  .SavingsAmount__title {
+    margin: 0 0 2px;
+    font-size: 18px;
+    font-weight: 500; }
+  .SavingsAmount__value {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 700; }

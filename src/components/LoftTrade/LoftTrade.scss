@@ -1,0 +1,27 @@
+.LoftTrade {
+  &__header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #2a2c2e;
+    color: #fff;
+  }
+
+  &__mainbody {
+    width: 1280px;
+    min-height: 100vh;
+    padding: 80px 0 100px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  &__footer {
+    height: 100px;
+    margin-top: -100px;
+    position: relative;
+    background-color: #1e2021;
+  }
+}

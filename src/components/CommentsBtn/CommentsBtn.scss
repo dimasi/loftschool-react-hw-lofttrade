@@ -1,0 +1,29 @@
+.CommentsBtn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 9px;
+  height: 33px;
+  border: 0 none;
+  background: none #f2f3f5;
+
+  &__icon {
+    display: block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    opacity: .3;
+  }
+
+  &__number {
+    color: #b3b3b5;
+    font-size: 18px;
+  }
+
+  &_active {
+    background-color: #468597;
+
+    .CommentsBtn__number {
+      color: #fff;
+    }
+  }
+}

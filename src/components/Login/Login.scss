@@ -1,0 +1,32 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+
+  &__logo {
+    width: 289px;
+  }
+
+  &__panel-form {
+    padding: 22px 22px 33px;
+    margin-bottom: 22px;
+    border: 1px solid #c3c3c3;
+  }
+
+  &__panel-form-field {
+    margin-bottom: 22px;
+  }
+
+  &__panel-switcher {
+    padding: 15px;
+    text-align: center;
+  }
+
+  &__panel-form-error-msg {
+    color: #db5753;
+  }
+}

@@ -1,0 +1,29 @@
+.History {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    
+    td {
+      padding: 11px 31px;
+      border: 1px solid #f2f2f2;
+    }
+
+    thead {
+      background-color: #eef1f1;
+
+      td {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 11px;
+    background-color: #f9fafb;
+    border: 1px solid #f2f2f2;
+    border-top: 0 none;
+  }
+}

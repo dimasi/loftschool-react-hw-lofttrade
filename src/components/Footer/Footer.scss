@@ -1,0 +1,26 @@
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1280px;
+  height: 100px;
+  padding: 0 20px;
+  margin: 0 auto;
+  color: #fff;
+
+  &__site-desc {
+    width: 240px;
+    font-size: 14px;
+    font-weight: 300;
+
+    p {
+      margin: 0 0 5px;
+    }
+
+    a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+}

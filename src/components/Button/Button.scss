@@ -1,0 +1,17 @@
+.Button {
+  height: 51px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 24px;
+
+  &_block {
+    width: 100%;
+  }
+
+  &_color {
+    &_primary {
+      border: 1px solid #dfdfdf;
+      background: none #4db6e2;
+    }
+  }
+}

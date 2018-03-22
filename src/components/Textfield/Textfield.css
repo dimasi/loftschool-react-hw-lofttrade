@@ -1,0 +1,24 @@
+.Textfield {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  border: 1px solid #dfdfdf;
+  border-radius: 4px;
+  overflow: hidden; }
+  .Textfield__addon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px; }
+  .Textfield__addon-icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: no-repeat center;
+    background-size: contain;
+    opacity: .4; }
+  .Textfield__control {
+    width: calc(100% - 52px);
+    height: 100%;
+    border: 0 none;
+    font-size: 18px; }

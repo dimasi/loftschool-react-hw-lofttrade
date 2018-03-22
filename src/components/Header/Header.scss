@@ -1,0 +1,81 @@
+.Header {
+  display: flex;
+  align-items: center;
+  width: 1280px;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  &__logo {
+    margin-right: 50px;
+  }
+
+  &__trade-link {
+    color: #fff;
+    text-decoration: none;
+
+    &_active {
+      color: #61dafb;
+    }
+  }
+
+  &__exchange {
+    margin: 0 55px 0 auto;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 108px;
+    height: 32px;
+    padding: 0 27px;
+    position: relative;
+    border-radius: 32px;
+    background-color: rgba(#fff, .2);
+    text-decoration: none;
+
+    &_active {
+      background-color: #61dafb;
+    }
+  }
+  
+  &__btn-text {
+    color: #fff;
+
+    &_small {
+      font-size: 16px;
+    }
+  }
+
+  &__btn-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    right: -10px;
+    border-radius: 27px;
+    background-color: #9f3232;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  &__btn-caret {
+    border: 5px solid transparent;
+    border-top: 6px solid #fff;
+    position: relative;
+    top: 3px;
+    margin-left: 5px;
+  }
+
+  &__profile {
+    margin-left: 20px;
+  }
+
+  &__stats {
+    margin-left: 20px;
+  }
+}

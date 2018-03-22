@@ -1,0 +1,24 @@
+.UserLabel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+  .UserLabel__avatar {
+    width: 34px;
+    height: 34px;
+    background: no-repeat center;
+    background-size: cover; }
+  .UserLabel__name {
+    margin: 0 25px 0 20px;
+    font-size: 18px;
+    font-weight: 500; }
+  .UserLabel__position {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding: 0 10px;
+    background-color: #468597;
+    color: #fff;
+    font-size: 14.78px;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap; }

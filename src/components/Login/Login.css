@@ -1,0 +1,21 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  position: relative; }
+  .Login__logo {
+    width: 289px; }
+  .Login__panel-form {
+    padding: 22px 22px 33px;
+    margin-bottom: 22px;
+    border: 1px solid #c3c3c3; }
+  .Login__panel-form-field {
+    margin-bottom: 22px; }
+  .Login__panel-switcher {
+    padding: 15px;
+    text-align: center; }
+  .Login__panel-form-error-msg {
+    color: #db5753; }

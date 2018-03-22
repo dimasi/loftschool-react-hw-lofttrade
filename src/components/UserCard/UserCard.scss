@@ -1,0 +1,50 @@
+.UserCard {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__info {
+    padding-left: 50px;
+  }
+
+  &__avatar {
+    text-align: center;
+  }
+  
+  &__avatar-img {
+    display: block;
+    margin-bottom: 22px;
+    width: 185px;
+    height: 185px;
+  }
+
+  &__avatar-upload-btn {
+    border: 0 none;
+    background: none transparent;
+    color: #b3b3b3;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  &__field {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+
+  &__field-value {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__field-value-change-btn {
+    margin-left: 5px;
+    border: 0 none;
+    background: none transparent;
+    color: #b3b3b3;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

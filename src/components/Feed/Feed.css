@@ -1,0 +1,60 @@
+.Feed {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .Feed__content {
+    width: 602px;
+    padding: 32px 32px 30px;
+    border-radius: 4px;
+    background-color: #fff; }
+  .Feed__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px; }
+  .Feed__header-user {
+    width: calc(100% - 130px); }
+  .Feed__header-date {
+    width: 130px;
+    color: #adaeb0;
+    text-align: right; }
+  .Feed__img-top {
+    margin-bottom: 26px; }
+  .Feed__img {
+    display: block;
+    width: 100%; }
+  .Feed__comments {
+    width: 538px;
+    margin-top: 1px;
+    background-color: #fff; }
+  .Feed__heading {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 5px; }
+  .Feed__heading-title {
+    width: calc(100% - 93px);
+    padding-top: 1px;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 500; }
+  .Feed__heading-title-icon {
+    position: relative; }
+    .Feed__heading-title-icon_purchase {
+      border: 7px solid transparent;
+      border-top: 8px solid #b4563d;
+      top: 17px;
+      margin-left: 10px; }
+    .Feed__heading-title-icon_selling {
+      border: 7px solid transparent;
+      border-bottom: 8px solid #5eb43d;
+      top: -17px;
+      margin-left: 10px; }
+  .Feed__heading-comments {
+    width: 93px;
+    text-align: right; }
+  .Feed__desc-text-container {
+    margin-bottom: 25px;
+    position: relative; }
+  .Feed__desc-more-toggler {
+    position: absolute;
+    right: 0;
+    bottom: 1px; }

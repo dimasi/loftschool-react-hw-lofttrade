@@ -1,0 +1,29 @@
+.MoreToggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 20px;
+  border: 0 none;
+  background: none #fff; }
+  .MoreToggler__pins {
+    display: block;
+    width: 8px;
+    height: 8px;
+    position: relative;
+    border-radius: 50%;
+    background-color: #468597; }
+    .MoreToggler__pins::before, .MoreToggler__pins::after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      top: 0;
+      border-radius: 50%;
+      background-color: #468597; }
+    .MoreToggler__pins::before {
+      right: 14px; }
+    .MoreToggler__pins::after {
+      left: 14px; }
+  .MoreToggler_active {
+    opacity: .4; }

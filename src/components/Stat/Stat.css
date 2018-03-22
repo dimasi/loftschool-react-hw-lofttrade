@@ -1,0 +1,38 @@
+.Stat {
+  display: flex;
+  flex-direction: column;
+  width: 602px;
+  min-height: 225px;
+  padding: 23px 30px 23px 30px;
+  margin-bottom: 47px;
+  position: relative;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden; }
+  .Stat__position {
+    display: flex;
+    justify-content: flex-end;
+    width: 155px;
+    height: 155px;
+    padding-right: 13px;
+    position: absolute;
+    right: 36px;
+    bottom: -35px;
+    background: no-repeat center;
+    color: rgba(27, 27, 27, 0.2);
+    font-size: 195.66px;
+    font-weight: 700;
+    line-height: 120px;
+    user-select: none; }
+  .Stat__header {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+  .Stat__header-user {
+    width: calc(100% - 185px); }
+  .Stat__transaction-count {
+    width: 185px;
+    color: #adaeb0;
+    text-align: right; }
+  .Stat__savings-amount {
+    margin-top: 41px; }
